@@ -31,4 +31,4 @@
 
 ## License
 
-MIT
+MIT가 아니라 내마음대로
