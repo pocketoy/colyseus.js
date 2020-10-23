@@ -118,7 +118,9 @@ export class Client {
             params.push(`${name}=${options[name]}`);
         }
 
-        return `${this.endpoint}/${room.processId}/${room.roomId}?${params.join('&')}`;
+        //return `${this.endpoint}/${room.processId}/${room.roomId}?${params.join('&')}`;
+        // jyhan
+        return `ws://${room.serverIp}:${room.serverPort}/${room.processId}/${room.roomId}?${params.join('&')}`;
     }
 
 }
