@@ -20,7 +20,7 @@ export class SchemaSerializer<T extends Schema = any> implements Serializer<T> {
     }
 
     teardown() {
-        // this.state.onRemove
+        this.state?.['$changes']?.root.clearRefs();
     }
 
     handshake(bytes: number[], it?: Iterator) {
@@ -31,7 +31,7 @@ export class SchemaSerializer<T extends Schema = any> implements Serializer<T> {
 
         } else {
             // initialize reflected state from server
-            this.state = Reflection.decode(bytes) as any;
+            this.state = Reflection.decode(bytes, it) as any;
         }
     }
 }

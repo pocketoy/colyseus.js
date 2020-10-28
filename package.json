@@ -1,7 +1,9 @@
 {
   "name": "colyseus.js",
-  "version": "0.13.2-alpha.0",
-  "description": "Multiplayer Game Client for the Browser",
+  "version": "0.14.0",
+  "description": "Colyseus Multiplayer Client for JavaScript/TypeScript",
+  "author": "Endel Dreyer",
+  "license": "MIT",
   "keywords": [
     "colyseus",
     "multiplayer",
@@ -26,16 +28,21 @@
     "tslint": "tslint --project ."
   },
   "files": [
+    "dist",
     "lib",
     "LICENSE",
     "README.md"
   ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/endel"
+  },
   "engines": {
     "node": ">= 5.x"
   },
   "dependencies": {
     "@colyseus/http": "^2.0.0",
-    "@colyseus/schema": "^0.5.39",
+    "@colyseus/schema": "^1.0.0",
     "@gamestdio/signals": "^1.0.0",
     "@gamestdio/state-listener": "^3.1.0",
     "@gamestdio/websocket": "^0.3.2",
